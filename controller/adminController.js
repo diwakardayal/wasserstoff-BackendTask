@@ -55,6 +55,9 @@ const getData = asyncHandler(async (req, res) => {
     });
   } else if (format === "json") {
     res.json(csvData);
+  } else {
+    res.status(400);
+    throw new Error("Please choose csv or json");
   }
 });
 
