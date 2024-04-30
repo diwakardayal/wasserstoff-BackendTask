@@ -21,8 +21,6 @@ Normal User credentials:
 userId: diwakar
 password: 123456
 
-
-
 # Postman Collection JSON (can be imported for testing)
 {
 	"info": {
@@ -71,12 +69,12 @@ password: 123456
 					"urlencoded": [
 						{
 							"key": "userId",
-							"value": "admin",
+							"value": "",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "admin",
+							"value": "",
 							"type": "text"
 						},
 						{
@@ -96,25 +94,7 @@ password: 123456
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:3000/admin/export/:format",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"admin",
-						"export",
-						":format"
-					],
-					"variable": [
-						{
-							"key": "format",
-							"value": ""
-						}
-					]
-				}
+				"url": "http://localhost:3000/api/admin/export/json"
 			},
 			"response": []
 		},
@@ -123,7 +103,7 @@ password: 123456
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "http://localhost:3000/image"
+				"url": "http://localhost:3000/api/image/"
 			},
 			"response": []
 		},
