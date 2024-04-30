@@ -4,10 +4,6 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
 const imageSchema = mongoose.Schema({
-  imageId: {
-    type: String,
-    required: true,
-  },
   userId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "user",
@@ -26,10 +22,13 @@ const imageSchema = mongoose.Schema({
       },
       confidence: {
         type: Number,
-        required: true,
+      },
+      boundingBox: {
+        type: Object,
+        default: null,
       },
     },
   ],
 });
 
-module.exports = mongoose.model("admin", imageSchema);
+module.exports = mongoose.model("image", imageSchema);
